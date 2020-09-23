@@ -1,11 +1,9 @@
-body {
-  font-family: "Nunito", sans-serif;
-}
 h1 {
   color: #777;
   text-transform: capitalize;
   text-align: center;
   letter-spacing: 1.5px;
+  font-family: "Nunito", sans-serif;
   background-image: linear-gradient(
     to left,
     rgb(43, 61, 165),
@@ -15,6 +13,7 @@ h1 {
 }
 .images_previewer {
   width: 100%;
+
   * {
     margin: 0px;
     padding: 0px;
@@ -24,15 +23,15 @@ h1 {
     width: 100%;
     .item_preview {
       width: 80%;
-      background-color: #fbfbf8;
-      margin: 40px auto;
-
+      margin: 40px auto 0px;
+      padding: 10px;
       img {
         padding: 3px;
-        background-color: #fff;
-        box-shadow: 0px 2px 3px 2px #ddd;
-        width: 100%;
-        border: 2px solid #eee;
+        display: block;
+        margin: auto;
+        width: 70%;
+        border: 2px solid #efefef;
+        padding: 3px;
       }
     }
     .previewer_items {
@@ -43,7 +42,6 @@ h1 {
         padding: 10px 20px;
         display: flex;
         justify-content: center;
-        border: 2px solid #eee;
 
         &::-webkit-scrollbar-track {
           background-color: #f5f5f5;
@@ -59,17 +57,18 @@ h1 {
         }
 
         img {
+          border: 1px solid #eee;
           transition: 0.3s;
           height: 100px;
           width: 100px;
           margin: 0px 5px;
           object-fit: cover;
+          border-radius: 3px;
           cursor: pointer;
           &:hover {
-            border: 2px solid #eee;
             padding: 2px;
             border-radius: 3px;
-            box-shadow: 0px 2px 3px 2px #ccc;
+            box-shadow: 0px 2px 1px 1px #ccc;
           }
         }
       }
@@ -77,10 +76,10 @@ h1 {
   }
 }
 .active_image {
-  border: 2px solid #ccc;
+  border: 5px solid red;
   padding: 2px;
   border-radius: 3px;
-  box-shadow: 0px 2px 3px 2px #ccc;
+  box-shadow: 0px 2px 4px 1px #aaa;
 }
 @media (max-width: 992px) {
   .images_previewer {
@@ -131,5 +130,23 @@ h1 {
   }
   100% {
     opacity: 1;
+  }
+}
+.mywebsite {
+  background-color: #fff;
+  font-size: 64px;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  display: block;
+  font-family: nunito;
+  color: #777;
+  text-transform: capitalize;
+  transition: 1s;
+  margin-top: 100px;
+
+  &:hover {
+    background-color: #0861d4;
+    color: #fff;
   }
 }
